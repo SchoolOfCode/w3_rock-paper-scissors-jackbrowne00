@@ -4,4 +4,20 @@ function generateCompMove() {
     return compMoves[r]
 };
 
-console.log (generateCompMove)
+player2 = generateCompMove();
+
+
+
+
+
+
+// console.log (player1);
+
+let compRandNum = Math.floor(Math.random() * 3);
+
+// console.log (compRandNum);
+
+compMoves = ["rock", "paper", "scissors"];
+player2 = compMoves[compRandNum];
+
+// console.log (player2)
