@@ -7,7 +7,17 @@ while ((player1 !== ("rock")) && (player1 !== ("paper")) && (player1 !== ("sciss
     player1 = prompt ("Invalid choice. Please choose rock, paper or scissors.")
 };
 
-console.log (player1);
+console.log(player1);
+
+function generateCompMove() {
+    let compMoves = ["rock", "paper", "scissors"];
+    let r = [Math.floor(Math.random() * 3)];
+    return compMoves[r]
+};
+
+player2 = generateCompMove();
+
+console.log (player2);
 
 function getWinner(player1, player2) {
     if (player1 === "rock" && player2 === "rock"){
@@ -40,5 +50,7 @@ function getWinner(player1, player2) {
 }
 
 let outcome = getWinner(player1, player2)
+
+console.log(outcome)
 
 alert(outcome);
