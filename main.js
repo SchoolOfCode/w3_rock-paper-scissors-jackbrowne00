@@ -1,42 +1,44 @@
-// ## Task 1: Logic
+let player1 = "";
+let player2 =  "rock";
 
-let playerMove = prompt ("Please choose rock, paper or scissors");
+player1 = prompt ("Please choose rock, paper or scissors");
 
-let computerMove = "rock"
-console.log("playerMove")
+while ((player1 !== ("rock")) && (player1 !== ("paper")) && (player1 !== ("scissors"))) {
+    player1 = prompt ("Invalid choice. Please choose rock, paper or scissors.")
+};
 
-if (playerMove === "rock" && computerMove === "rock"){
-    console.log ("Draw");
+console.log (player1);
+
+function getWinner(player1, player2) {
+    if (player1 === "rock" && player2 === "rock"){
+        return `0`;
+    }
+    if (player1 === "paper" && player2 === "rock"){
+        return `1`;
+    }
+    if (player1 === "scissors" && player2 === "rock"){
+        return `-1`;
+    }
+    if (player1 === "rock" && player2 === "paper"){
+        return `-1`;
+    }
+    if (player1 === "paper" && player2 === "paper"){
+        return `0`;
+    }
+    if (player1 === "scissors" && player2 === "paper"){
+        return `1`;
+    }
+    if (player1 === "rock" && player2 === "scissors"){
+        return `1`;
+    }
+    if (player1 === "paper" && player2 === "scissors"){
+        return `-1`;
+    }
+    if (player1 === "scissors" && player2 === "scissors"){
+        return `0`;
+    }
 }
 
-if (playerMove === "paper" && computerMove === "rock"){
-    console.log ("Well done, you won!");
-}
+let score = getWinner(player1, player2)
 
-if (playerMove === "scissors" && computerMove === "rock"){
-    console.log ("You're rubbish!");
-}
-
-if (playerMove === "rock" && computerMove === "paper"){
-    console.log ("You're rubbish!");
-}
-
-if (playerMove === "paper" && computerMove === "paper"){
-    console.log ("Draw");
-}
-
-if (playerMove === "scissors" && computerMove === "paper"){
-    console.log ("Well done, you won!");
-}
-
-if (playerMove === "rock" && computerMove === "scissors"){
-    console.log ("Well done, you won!");
-}
-
-if (playerMove === "paper" && computerMove === "scissors"){
-    console.log ("You're rubbish!");
-}
-
-if (playerMove === "scissors" && computerMove === "scissors"){
-    console.log ("Draw");
-}
+alert(score);
