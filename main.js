@@ -39,6 +39,6 @@ function getWinner(player1, player2) {
     }
 }
 
-let score = getWinner(player1, player2)
+let outcome = getWinner(player1, player2)
 
-alert(score);
+alert(outcome);
