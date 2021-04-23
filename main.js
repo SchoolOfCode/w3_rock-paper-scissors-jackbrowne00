@@ -1,5 +1,6 @@
 let gamesPlayed = 0;
 let wingames = 0;
+wingames = document.getElementById("player1");
 let drawgames = 0;
 let losegames = 0;
 
@@ -8,7 +9,8 @@ let anotherPlay = true;
 function playGame() {
 
 let player1 = "";
-let player2 =  "rock";
+player1 = document.getElementById("userNameLabel");
+let player2 =  "";
 
 player1 = prompt ("Please choose rock, paper or scissors");
 
